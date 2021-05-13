@@ -4,7 +4,60 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,600;1,300&display=swap"
+      rel="stylesheet"
+    />
     <title>Text Editor</title>
   </head>
-  <body></body>
+  <body>
+    <div class="editor">
+      <div class="controls">
+        <ul class="controls__list">
+          <li>
+            <button class="controls__btn controls__btn--bold js__btn_1">
+              B
+            </button>
+          </li>
+          <li>
+            <button class="controls__btn controls__btn--italic js__btn_2">
+              I
+            </button>
+          </li>
+          <li>
+            <button class="controls__btn controls__btn--bulletPoints js__btn_3">
+              <img src="./assets/options-lines.png" alt="bulletPoints" />
+            </button>
+          </li>
+        </ul>
+      </div>
+      <div class="board">
+        <textarea class="board__textarea"></textarea>
+      </div>
+      <div class="fileHandlers">
+        <input
+          class="fileHandlers__input"
+          type="file"
+          accept=".json"
+          hidden="hidden"
+        />
+        <button class="fileHandlers__customInputBtn">Wybierz plik</button>
+        <span class="fileHandlers__customInputText">Nie wybrano pliku</span>
+        <button class="fileHandlers__button">Pobierz</button>
+      </div>
+    </div>
+    <footer class="footer">
+      <p>Strona stworzona przez:</p>
+      <a class="footer__link" href="https://github.com/mateuszGadecki"
+        >Mateusz Gadecki</a
+      >
+    </footer>
+    <script type="module" src="./app.js"></script>
+  </body>
 </html>
