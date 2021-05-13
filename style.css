@@ -1,0 +1,217 @@
+html,
+body {
+  min-height: 100%;
+  background-color: #ecf3f8;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.editor {
+  width: 60%;
+  height: 100vh;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 15% 60% 15%;
+  grid-template-rows: 15% 60% 15%;
+}
+
+.controls__list {
+  width: 100%;
+  height: 100%;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.controls__btn {
+  background: none;
+  margin-left: 40px;
+  border: transparent;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.controls__btn:hover,
+.controls__btn:active {
+  background: #d5d5d5;
+}
+
+.controls__btn--bold {
+  font-family: "Roboto Mono", monospace;
+  font-weight: 600;
+}
+
+.controls__btn--italic {
+  font-family: "Roboto Mono", monospace;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.controls__btn--active {
+  background: #d5d5d5;
+}
+
+.controls__btn--bulletPoints {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.board {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.board__textarea {
+  width: 100%;
+  height: 100%;
+  resize: none;
+  overflow-y: auto;
+  border: none;
+  outline: none;
+  font-family: "Lato", sans-serif;
+  padding: 3%;
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+
+.board__textarea--bold {
+  font-weight: 700 !important;
+}
+
+.board__textarea--italic {
+  font-style: italic;
+}
+
+.fileHandlers {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+
+.fileHandlers__button,
+.fileHandlers__customInputBtn {
+  border: none;
+  cursor: pointer;
+  margin-left: 40px;
+  font-size: 1.1rem;
+  background-color: #70a5ca;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 30px;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.fileHandlers__button:hover,
+.fileHandlers__customInputBtn:hover,
+.fileHandlers__button:active .fileHandlers__customInputBtn:active {
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+  background-color: #4b8dbd;
+}
+
+.fileHandlers__customInputText {
+  font-size: 0.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: 3px;
+  margin-left: 10px;
+}
+
+.footer {
+  height: 70px;
+  width: 100%;
+  background: rgb(236, 243, 248);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(62%, rgba(236, 243, 248, 1)),
+    color-stop(81%, rgba(255, 255, 255, 1))
+  );
+  background: -o-linear-gradient(
+    top,
+    rgba(236, 243, 248, 1) 62%,
+    rgba(255, 255, 255, 1) 81%
+  );
+  background: linear-gradient(
+    180deg,
+    rgba(236, 243, 248, 1) 62%,
+    rgba(255, 255, 255, 1) 81%
+  );
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.footer__link {
+  text-decoration: none;
+  cursor: pointer;
+  margin-left: 10px;
+  border-bottom: 2px solid transparent;
+  color: #4b8dbd;
+  -webkit-transition: border-bottom 0.2s;
+  -o-transition: border-bottom 0.2s;
+  transition: border-bottom 0.2s;
+}
+
+.footer__link:hover,
+.footer__link:active {
+  border-bottom: 2px solid #4b8dbd;
+}
