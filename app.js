@@ -68,3 +68,16 @@ DOMstrings.downloadBtn.addEventListener(
 DOMstrings.fileInput.addEventListener("change", function () {
   upload(this);
 });
+
+// Functions that allow to change the default appearance of the input type ='file'
+DOMstrings.customBtn.addEventListener("click", () => {
+  DOMstrings.realInputBtn.click();
+});
+
+DOMstrings.realInputBtn.addEventListener("change", () => {
+  DOMstrings.realInputBtn.value
+    ? (DOMstrings.customText.innerHTML = DOMstrings.realInputBtn.value.match(
+        /[\/\\]([\w\d\s\.\-\(\)]+)$/
+      )[1])
+    : (DOMstrings.customText.innerHTML = "Nie wybrano pliku");
+});
