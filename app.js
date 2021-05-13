@@ -4,8 +4,9 @@ import {
   addBulletOnEnter,
   removeBullets,
 } from "./Modules/bulletPoints.js";
+import { download, upload } from "./Modules/fileHandlers.js";
 
-// Switching between the active class
+// Toggling between the active class
 const clickHandler = (btn, activeClass, effectClass) => {
   btn.addEventListener("click", function () {
     if (this.classList.contains(activeClass)) {
@@ -39,4 +40,31 @@ DOMstrings.bulletsBtn.addEventListener("click", function () {
     addBullets();
     addBulletOnEnter();
   }
+});
+
+// Calling a function that saves a file with text and text style in json format
+DOMstrings.downloadBtn.addEventListener(
+  "click",
+  function () {
+    let [bold, italic] = [false, false];
+    DOMstrings.boldBtn.classList.contains("controls__btn--active")
+      ? (bold = true)
+      : (bold = false);
+    DOMstrings.italicBtn.classList.contains("controls__btn--active")
+      ? (italic = true)
+      : (italic = false);
+    const details = {
+      content: DOMstrings.board.value,
+      bold: bold,
+      italic: italic,
+    };
+    const jsonDetails = JSON.stringify(details);
+    download("data.json", jsonDetails);
+  },
+  false
+);
+
+// Calling a function that reads a file placed by the user
+DOMstrings.fileInput.addEventListener("change", function () {
+  upload(this);
 });
