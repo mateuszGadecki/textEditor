@@ -103,9 +103,9 @@ body {
   border: none;
   outline: none;
   font-family: "Lato", sans-serif;
-  padding: 3%;
   font-size: 1.1rem;
   font-weight: 300;
+  padding: 1%;
 }
 
 .board__textarea--bold {
@@ -214,4 +214,45 @@ body {
 .footer__link:hover,
 .footer__link:active {
   border-bottom: 2px solid #4b8dbd;
+}
+
+@media (max-width: 660px) {
+  .editor {
+    width: 80%;
+  }
+}
+@media (max-width: 500px) {
+  .controls__btn {
+    margin-left: 0px;
+  }
+  .board__textarea {
+    font-size: 0.9rem;
+  }
+  .controls__list {
+    width: 80%;
+    margin: 0 auto;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  .fileHandlers__button,
+  .fileHandlers__customInputBtn {
+    margin-left: 20px;
+    font-size: 0.9rem;
+  }
+  .fileHandlers__customInputText {
+    font-size: 0.65rem;
+  }
+  .footer__title,
+  .footer__link {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .fileHandlers__button,
+  .fileHandlers__customInputBtn {
+    margin-left: 10px;
+    font-size: 0.8rem;
+  }
 }
